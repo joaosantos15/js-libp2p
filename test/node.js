@@ -1,6 +1,5 @@
 'use strict'
 
-require('./base')
 require('./transports.node')
 require('./stream-muxing.node')
 require('./peer-discovery.node')
