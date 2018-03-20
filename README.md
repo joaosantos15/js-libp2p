@@ -116,17 +116,17 @@ class Node extends libp2p {
       // The libp2p modules for this libp2p bundle
       modules: {
         transport: [
-          new TCP(),
-          new WS()
+          TCP,
+          WS
         ],
         streamMuxer: [
-          spdy
+          SPDY
         ],
-        cryptoComm: [
-          secio
+        connEncryption: [
+          SECIO
         ]
         peerDiscovery: [
-          new MulticastDNS(peerInfo)
+          MulticastDNS
         ],
         peerRouting: {},              // Currently both peerRouting and contentRouting are patched through the DHT,
         contentRouting: {}            // this will change once we factor that into two modules, for now do the following line:
